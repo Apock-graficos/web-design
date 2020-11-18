@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.panel-chat-usuarios {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #fff;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .2);
+    width: 370px;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+.panel-chat-usuarios  a {
+    color: inherit;
+    text-decoration: none;
+}
+.panel-chat-usuarios .panel-chat-header {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #8555FF;
+    padding: 10px 15px;
+}
+.botones-ajuntar .boton,
+.panel-chat-usuarios .panel-chat-header .botones-chat {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+    background-color: #6C43D5;
+    color: #fff;
+}
+.panel-chat-usuarios .panel-chat-header .botones-chat:hover {
+    background-color: #603BBE;
+}
+
+/* datos de usuario */
+.panel-chat-usuarios .panel-chat-body {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.panel-chat-usuarios .panel-chat-datos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #DADADA;
+    background-color: #fff;
+}
+
+.panel-chat-usuarios .panel-chat-datos .chat-avatar {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #D6D6D6;
+    border-radius: 50%;
+    margin-right: 1rem;
+    position: relative;
+}
+
+.panel-chat-usuarios .panel-chat-datos .chat-avatar img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.panel-chat-usuarios .estado-usuario {
+    position: absolute;
+    display: block;
+    width: 17px;
+    height: 17px;
+    background-color: #50FF65;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    z-index: 1;
+    bottom: -1px;
+    left: -1px;
+}
+
+.panel-chat-usuarios .panel-chat-datos h5 {
+    font-size: 1rem;
+    margin-bottom: 0.1rem;
+}
+.panel-chat-usuarios .panel-chat-datos p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+    color: #8B8B8B;
+}
+
+/* cuerpo del chat */
+.panel-chat-usuarios .panel-chat-body {
+    display: block;
+    padding: 15px 0;
+    flex-wrap: wrap;
+    height: 365px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+/* chat */
+.panel-chat-usuarios .panel-msj-der,
+.panel-chat-usuarios .panel-msj-izq {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+}
+.panel-chat-usuarios .panel-msj-der {
+    align-items: flex-end;
+}
+.panel-chat-usuarios .panel-msj-der .chat-cuerpo,
+.panel-chat-usuarios .panel-msj-izq .chat-cuerpo {
+    background-color: #96B4FF;
+    width: auto;
+    max-width: 85%;
+    margin-left: 1rem;
+    border-radius: 0 20px 20px 20px;
+    padding: 10px 15px;
+    position: relative;
+    font-size: .9em;
+}
+.panel-chat-usuarios .panel-msj-der .chat-cuerpo {
+    margin-left: 0;
+    margin-right: 1rem;
+    border-radius: 20px 0 20px 20px;
+    background-color: #D4D4D4;
+}
+.panel-chat-usuarios .panel-msj-der .chat-cuerpo::before,
+.panel-chat-usuarios .panel-msj-izq .chat-cuerpo::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 10px;
+    border-color: transparent;
+    border-style: solid;
+    position: absolute;
+    top: 0;
+}
+.panel-chat-usuarios .panel-msj-izq .chat-cuerpo::before {
+    left: -20px;
+    border-right-color: #96B4FF;
+}
+.panel-chat-usuarios .panel-msj-der .chat-cuerpo::before {
+    right: -20px;
+    border-left-color: #D4D4D4;
+}
+.panel-chat-usuarios .contenedor-msj {
+    font-size: 1em;
+    margin-bottom: 0.5rem;
+}
+.panel-chat-usuarios .contenedor-msj-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.panel-chat-usuarios .contenedor-msj-footer .botones-footer {
+    display: flex;
+    list-style: none;
+    font-size: 0.85rem;
+    color: #fff;
+}
+.panel-chat-usuarios .contenedor-msj-footer .botones-footer li {
+    margin-right: 1rem;
+}
+
+/* footer chat */
+.panel-chat-usuarios .panel-chat-footer {
+    display: block;
+    padding: 15px 10px;
+    background-color: #fff;
+    position: relative;
+    border-top: 1px solid #DADADA;
+}
+.panel-chat-usuarios .panel-chat-footer .texto-chat {
+    display: block;
+    width: 100%;
+    height: 70px;
+    border: 0;
+    background-color: #E5E5E5;
+    border-radius: 15px;
+    padding: 15px;
+    padding-right: 70px;
+    color: #333;
+}
+
+.panel-chat-usuarios .botones-ajuntar {
+    display: block;
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    z-index: 1;
+}
+.botones-ajuntar .boton {
+    background-color: #C7C7C7;
+    color: #333;
+}
+
+</style>
+<!--==========================
+=            html            =
+===========================-->
+<div class="panel-chat-usuarios">
+    <div class="panel-chat-header">
+        <div class="panel-chat-botones">
+            <button class="botones-chat" type="button">
+                <i class="fas fa-angle-down"></i>
+            </button>
+            <button class="botones-chat" type="button">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+    </div>
+    <div class="panel-chat-datos">
+        <div class="chat-avatar">
+            <img src="https://picsum.photos/200/200">
+            <span class="estado-usuario"></span>
+        </div>
+        <div class="datos-usuario">
+            <h5>Lorem, ipsum, dolor.</h5>
+            <p>Lorem ipsum dolor sit.</p>
+        </div>
+    </div>
+    <div class="panel-chat-body">
+        <!-- mensaje -->
+        <div class="panel-msj-izq">
+            <div class="chat-cuerpo">
+                <div class="contenedor-msj">
+                    ¿Sabias que de cada 10 personas en el mundo 5 son la mitad?
+                </div>
+                <div class="contenedor-msj-footer">
+                    <ul class="botones-footer">
+                        <li>
+                            <i class="fas fa-eye"></i>
+                        </li>
+                        <li>hace 3 min</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- mensaje -->
+        <div class="panel-msj-izq">
+            <div class="chat-cuerpo">
+                <div class="contenedor-msj">
+                    ¡Dato curiosos!
+                </div>
+                <div class="contenedor-msj-footer">
+                    <ul class="botones-footer">
+                        <li>
+                            <i class="fas fa-eye"></i>
+                        </li>
+                        <li>hace 4 min</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- mensaje -->
+        <div class="panel-msj-der">
+            <div class="chat-cuerpo">
+                <div class="contenedor-msj">
+                    Por esos es que nadie te quiere :V
+                </div>
+                <div class="contenedor-msj-footer">
+                    <ul class="botones-footer">
+                        <li>
+                            <i class="fas fa-eye"></i>
+                        </li>
+                        <li>hace 5 min</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- mensaje -->
+        <div class="panel-msj-izq">
+            <div class="chat-cuerpo">
+                <div class="contenedor-msj">
+                    Pero lo importante es que te suscribas :D
+                    y me sigas
+                </div>
+                <div class="contenedor-msj-footer">
+                    <ul class="botones-footer">
+                        <li>
+                            <i class="fas fa-eye-slash"></i>
+                        </li>
+                        <li>hace 1 día</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="panel-chat-footer">
+        <textarea class="texto-chat" name=""></textarea>
+        <div class="botones-ajuntar">
+            <button class="boton" type="">
+                <i class="fas fa-share"></i>
+            </button>
+            <button class="boton" type="">
+                <i class="fas fa-file-upload"></i>
+            </button>
+        </div>
+    </div>
+</div>
+<!--====  End of html  ====-->
+</body>
+
+</html>
