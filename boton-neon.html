@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    background-color: #181922;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.boton-neon {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 0;
+    color: #165C5A;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-out 200ms;
+    animation: efecto-texto-luz 3s ease-in infinite normal both;
+}
+.boton-neon:hover {
+    color: #38EDE8;
+    text-shadow: 0 0 3px #38EDE8;
+    animation: none !important;
+}
+.boton-neon::after,
+.boton-neon::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: -3px;
+    top: -3px;
+    border: 3px solid #165C5A;
+    border-radius: 8px;
+    transition: all ease-out 200ms;
+    animation: efecto-luz 3s ease-in infinite normal both;
+}
+.boton-neon:hover::before,
+.boton-neon:hover::after {
+    border-color: #38EDE8;
+    animation: none !important;
+}
+.boton-neon:hover::before {
+    filter: blur(4px);
+}
+.boton-neon:active {
+    color: #165C5A;
+    text-shadow: 0 0 0 #165C5A;
+}
+.boton-neon:active::before,
+.boton-neon:active::after {
+    border-color: #165C5A;
+    animation: none !important;
+}
+
+@keyframes efecto-texto-luz {
+    from {
+        color: #165C5A;
+    }
+    20% {
+        color: #165C5A;
+    }
+    23% {
+        color: #38EDE8;
+    }
+    36% {
+        color: #165C5A;
+    }
+    to {
+        color: #165C5A;
+    }
+}
+
+@keyframes efecto-luz {
+    from {
+        border-color: #165C5A;
+    }
+    60% {
+        border-color: #165C5A;
+    }
+    65% {
+        border-color: #38EDE8;
+    }
+    70% {
+        border-color: #165C5A;
+    }
+    95% {
+        border-color: #165C5A;
+    }
+    to {
+        border-color: #38EDE8;
+    }
+}
+</style>
+<!--==========================
+=            html            =
+===========================-->
+
+<button type="button" class="boton-neon">
+    <i class="fas fa-exclamation-triangle"></i>
+    <span>texto</span>
+</button>
+
+<!--====  End of html  ====-->
+</body>
+
+</html>
