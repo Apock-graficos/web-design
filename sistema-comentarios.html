@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.contenedor-comentarios {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 100%;
+}
+
+.contenedor-comentarios img {
+    width: 100%;
+}
+
+.area-comentar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-bottom: 1.5rem;
+    padding: 18px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+    border-radius: 12px;
+}
+
+.comentarios-usuarios {
+    width: calc(100% - 2.5rem);
+}
+
+.contenedor-comentarios a {
+    text-decoration: none;
+}
+
+.comentar-publicacion .avatar,
+.publicacion-realizada .usuario-publico .avatar,
+.contenedor-comentarios .comentario-principal-usuario .avatar,
+.area-comentar .avatar {
+    display: flex;
+    width: 65px;
+    height: 65px;
+    background-color: #F4F4F4;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+/* botones comentar */
+.boton-subir-archivo {
+    position: relative;
+    display: inline-block;
+}
+
+.boton-subir-archivo input[type="file"] {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+}
+
+.boton-file,
+.boton-enviar {
+    display: inline-block;
+    border: 0;
+    background-color: #374D71;
+    padding: 7px 15px;
+    margin-right: .5rem;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color ease-in 200ms;
+}
+
+.boton-file:hover,
+.boton-enviar:hover {
+    background-color: #4C6FA7;
+}
+
+/* fin */
+.contenedor-comentarios .comentario-principal-usuario .comentario,
+.area-comentar .inputs-comentarios {
+    flex-grow: 1;
+    flex-basis: 0;
+    margin-left: .5rem;
+}
+
+.area-comentar .inputs-comentarios {
+    margin-left: 1rem;
+}
+
+.contenedor-comentarios .comentario-principal-usuario .texto,
+.area-comentar .inputs-comentarios .area-comentario {
+    border: 0;
+    background-color: #F0F0F0;
+    display: block;
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: .5rem;
+}
+
+.botones-comentario span.tiempo-comentario {
+    font-size: 0.8rem !important;
+    color: #9F9F9F;
+    margin-left: .25rem;
+}
+
+.area-comentar .inputs-comentarios .area-comentario {
+    padding: 12px 15px;
+}
+
+.area-comentar .inputs-comentarios .botones-comentar {
+    display: flex;
+}
+
+/* comentarios de usuario */
+.comentarios-usuarios .comentario-principal-usuario {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.comentarios-usuarios .usuario-comentario {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.75rem;
+    position: relative;
+}
+
+.menu-comentario {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: #E9E9E9;
+    border-radius: 50%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.comentarios-usuarios .usuario-comentario .menu-comentario {
+    top: 5px;
+    right: -15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .4);
+}
+
+.comentarios-usuarios .usuario-comentario:hover .menu-comentario {
+    display: flex;
+}
+
+.publicacion-realizada .menu-comentario {
+    display: flex;
+    right: 0;
+}
+
+.menu-comentario .menu {
+    list-style: none;
+    position: absolute;
+    right: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, .2);
+    border-radius: 8px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease-in 200ms;
+}
+
+.menu-comentario:hover .menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-comentario .menu a {
+    display: block;
+    padding: 7px 15px;
+    color: inherit;
+}
+
+.menu-comentario .menu a:hover {
+    background-color: #E1E1E1;
+}
+
+.publicacion-realizada .usuario-publico .avatar,
+.comentarios-usuarios .comentario-principal-usuario .avatar {
+    width: 45px;
+    height: 45px;
+}
+
+.comentarios-usuarios .comentario-principal-usuario .texto {
+    padding: 10px 15px;
+    width: auto;
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: .25rem;
+    font-size: 0.9rem;
+    position: relative;
+    padding-right: 1.65rem;
+}
+
+.comentarios-usuarios .comentario-principal-usuario .comentar-comentario {
+    width: 100%;
+    display: flex;
+}
+
+.comentarios-usuarios .comentar-publicacion input[type="text"] {
+    border: 0;
+    background-color: #E1E1E1;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 8px 10px;
+    font-size: .9rem;
+    border-radius: 8px;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.botones-comentario {
+    display: block;
+}
+
+.botones-comentario button {
+    display: inline-block;
+    border: 0;
+    padding: 3px 8px;
+    font-size: .8rem;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.botones-comentario button:hover {
+    background-color: #D5D8E1;
+}
+
+.comentar-publicacion .avatar,
+.contenedor-sub-comentarios .comentario-principal-usuario .avatar {
+    width: 32px;
+    height: 32px;
+}
+
+.boton-enviar i,
+.boton-file i,
+.boton-puntuar i,
+.boton-responder i {
+    margin-right: .5rem;
+}
+
+/* publicacion realizada */
+.publicacion-realizada {
+    margin-bottom: 1.5rem;
+}
+
+.publicacion-realizada .usuario-publico {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: .5rem;
+    position: relative;
+}
+
+.publicacion-realizada .usuario-publico .contenido-publicacion {
+    margin-left: 1rem;
+}
+
+.comentar-publicacion {
+    display: flex;
+    width: 100%;
+}
+
+.comentar-publicacion .comentar-comentario {
+    flex-grow: 1;
+    flex-basis: 0;
+    display: flex;
+    align-items: center;
+}
+
+.publicacion-realizada p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9em;
+}
+
+.archivo-publicado img {
+    position: relative;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.publicacion-realizada .contenido-publicacion ul {
+    list-style: none;
+    font-size: 0.8em;
+    color: #909090;
+}
+</style>
+<!--==========================
+=            html            =
+===========================-->
+<section class="contenedor-comentarios">
+    <div class="area-comentar">
+        <div class="avatar">
+            <img src="http://localhost/multimedia/relleno/img-c9.png" alt="img">
+        </div>
+        <div class="inputs-comentarios">
+            <textarea name="" class="area-comentario"></textarea>
+            <div class="botones-comentar">
+                <div class="boton-subir-archivo">
+                    <label class="boton-file" for="adjuntar">
+                        <i class="far fa-image"></i>
+                        Adjuntar archivo
+                    </label>
+                    <input type="file" name="" value="" placeholder="" id="adjuntar">
+                </div>
+                <button class="boton-enviar" type="sutmit">
+                    <i class="fas fa-paper-plane"></i>
+                    Enviar
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="publicacion-realizada">
+        <div class="usuario-publico">
+            <div class="avatar">
+                <img src="http://localhost/multimedia/relleno/img-c9.png" alt="img">
+            </div>
+            <div class="contenido-publicacion">
+                <h4>Nombre de usuario</h4>
+                <ul>
+                    <li>Hace 3 min</li>
+                </ul>
+            </div>
+            <div class="menu-comentario">
+                <i class="fas fa-pen"></i>
+                <ul class="menu">
+                    <li><a href="">Editar</a></li>
+                    <li><a href="">Eliminar</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores aliquam possimus, doloremque repellat assumenda ipsam magni ducimus, dolorem explicabo</p>
+        <div class="archivo-publicado">
+            <img src="http://localhost/multimedia/relleno/img-s5.png" alt="img">
+        </div>
+        <div class="botones-comentario">
+            <button type="" class="boton-puntuar">
+                <i class="fas fa-thumbs-up"></i>
+                45
+            </button>
+            <button type="" class="boton-responder">
+                Comentar
+            </button>
+        </div>
+    </div>
+    <div class="comentarios-usuarios">
+        <!-- comentario principal -->
+        <div class="comentario-principal-usuario">
+            <div class="avatar">
+                <img src="http://localhost/multimedia/relleno/img-c10.png" alt="img">
+            </div>
+            <div class="comentario">
+                <div class="usuario-comentario">
+                    <div class="texto">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla tenetur necessitatibus, error debitis provident obcaecati blanditiis incidunt amet suscipit libero praesentium ducimus omnis harum commodi nobis modi perspiciatis? Quia, facilis.
+                        <div class="menu-comentario">
+                            <i class="fas fa-pen"></i>
+                            <ul class="menu">
+                                <li><a href="">Editar</a></li>
+                                <li><a href="">Eliminar</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="botones-comentario">
+                        <button type="" class="boton-puntuar">
+                            <i class="fas fa-thumbs-up"></i>
+                            5
+                        </button>
+                        <button type="" class="boton-responder">
+                            responrder
+                        </button>
+                        <span class="tiempo-comentario">
+                            hece 3 min
+                        </span>
+                    </div>
+                </div>
+
+                <!-- contenedor sub comentarios -->
+                <div class="contenedor-sub-comentarios">
+                    <!-- sub-comentario uno -->
+                    <div class="comentario-principal-usuario">
+                        <div class="avatar">
+                            <img src="http://localhost/multimedia/relleno/img-c7.png" alt="img">
+                        </div>
+                        <div class="comentario">
+                            <div class="usuario-comentario">
+                                <div class="texto">
+                                    Lorem ipsum dolor sit amet adipisicing elit, sed do eiusmod
+                                    <div class="menu-comentario">
+                                        <i class="fas fa-pen"></i>
+                                        <ul class="menu">
+                                            <li><a href="">Editar</a></li>
+                                            <li><a href="">Eliminar</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="botones-comentario">
+                                    <button type="" class="boton-puntuar">
+                                        <i class="fas fa-thumbs-up"></i>
+                                        12
+                                    </button>
+                                    <button type="" class="boton-responder">
+                                        responrder
+                                    </button>
+                                    <span class="tiempo-comentario">
+                                        hece 3 min
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="comentar-publicacion">
+            <div class="avatar">
+                <img src="http://localhost/multimedia/relleno/img-c10.png" alt="img">
+            </div>
+           <div class="comentar-comentario">
+               <input type="text" name="" value="" placeholder="">
+               <button type="" class="boton-enviar">
+                   <i class="fas fa-paper-plane"></i>
+               </button>
+           </div>
+        </div>
+        
+    </div>
+</section>
+<!--====  End of html  ====-->
+</body>
+
+</html>
