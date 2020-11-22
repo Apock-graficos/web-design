@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.botones-socieales {
+    width: auto;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: fixed;
+}
+.botones-socieales .contenedor-botones {
+    display: flex;
+    flex-direction: column;
+}
+.botones-socieales .contenedor-botones li {
+    display: block;
+}
+.botones-socieales .boton-social {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    display: flex;
+}
+.botones-socieales .texto-oculto {
+    position: absolute;
+    width: auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    top: 0;
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, .3);
+    padding-left: calc(55px + 15px);
+    padding-right: 15px;
+    border-right: 7px solid;
+    transition: all ease-out 220ms;
+    left: 0;
+    transform: translateX(-100%);
+    white-space: nowrap;
+}
+.botones-socieales .boton-social:hover .texto-oculto {
+    transform: translateX(0);
+}
+.botones-socieales .boton-social .icono-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    z-index: 1;
+}
+.botones-socieales .boton-social .icono-boton i {
+    font-size: 1.75rem;
+    transition: font-size 200ms ease-out;
+}
+.botones-socieales .boton-social:hover .icono-boton i {
+    font-size: 2.5rem;
+}
+.botones-socieales li:nth-child(1) .icono-boton {
+    background-color: #4141FF;
+}
+.botones-socieales li:nth-child(1) .texto-oculto {
+    background-color: #8282EF;
+    border-right-color: #4141FF;
+}
+.botones-socieales li:nth-child(2) .icono-boton {
+    background-color: #3DCFDC;
+}
+.botones-socieales li:nth-child(2) .texto-oculto {
+    background-color: #98DEE4;
+    border-right-color: #3DCFDC;
+}
+.botones-socieales li:nth-child(3) .icono-boton {
+    background: linear-gradient(#B328F3, #2E87FF);
+}
+.botones-socieales li:nth-child(3) .texto-oculto {
+    background-color: #CD5EFF;
+    border-right-color: #B328F3;
+}
+.botones-socieales li:nth-child(4) .icono-boton {
+    background: #FF3434;
+}
+.botones-socieales li:nth-child(4) .texto-oculto {
+    background-color: #FF9595;
+    border-right-color: #FF3434;
+}
+</style>
+<!--==========================
+=            html            =
+===========================-->
+<div class="botones-socieales">
+    <ul class="contenedor-botones">
+        <li>
+            <a class="boton-social" href="#" title="">
+                <div class="icono-boton">
+                    <i class="fab fa-facebook-square"></i>
+                </div>
+                <div class="texto-oculto">
+                    120 me gusta
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="boton-social" href="#" title="">
+                <div class="icono-boton">
+                    <i class="fab fa-twitter"></i>
+                </div>
+                <div class="texto-oculto">
+                    155 Seguidores
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="boton-social" href="#" title="">
+                <div class="icono-boton">
+                    <i class="fab fa-instagram"></i>
+                </div>
+                <div class="texto-oculto">
+                    2k Seguidores
+                </div>
+            </a>
+        </li>
+        <li>
+            <a class="boton-social" href="#" title="">
+                <div class="icono-boton">
+                    <i class="fab fa-youtube"></i>
+                </div>
+                <div class="texto-oculto">
+                    55k suscriptores
+                </div>
+            </a>
+        </li>
+    </ul>
+</div>
+<!--====  End of html  ====-->
+</body>
+
+</html>
