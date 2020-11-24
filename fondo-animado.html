@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.contenedor-fondo-animado {
+    display: block;
+    height: 100vh;
+    background: linear-gradient(#39BBDC, #FF3192);
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+.seccion-contenido {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.seccion-contenido .contenido {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+    z-index: 5;
+}
+.seccion-contenido .contenido h4 {
+    font-size: 4rem;
+    margin-bottom: 2.5rem;
+    font-family: Lucida Handwriting;
+}
+.seccion-contenido .contenido p {
+    font-style: italic;
+    font-size: 1.75rem;
+    margin-bottom: 3.5rem;
+    font-family: Gill Sans MT;
+}
+.seccion-contenido .contenido h4,
+.seccion-contenido .contenido p {
+    text-shadow: 0 0 5px rgba(0, 0, 0, .2);
+}
+.seccion-contenido .contenido ul {
+    list-style: none;
+}
+.seccion-contenido .contenido ul a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 12px;
+    transition: all ease-in 100ms;
+    transform: translateY(0)
+}
+.seccion-contenido .contenido ul a:hover {
+    transform: translateY(-.5rem);
+}
+.seccion-contenido .contenido li:nth-child(1) a {
+    border: 3px solid #E86BFF;
+}
+.seccion-contenido .contenido li:nth-child(2) a {
+    border: 3px solid #90BAFF;
+}
+.seccion-contenido .contenido li:nth-child(3) a {
+    border: 3px solid #FF5071;
+}
+.seccion-contenido .contenido ul li {
+    display: inline-block;
+}
+.seccion-contenido .contenido ul li + li {
+    margin-left: 2.5rem;
+}
+
+/* animacion */
+.animacion {
+    z-index: 1;
+}
+span.cuatro,
+span.dos,
+span.tres,
+span.uno {
+    border: 0;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    animation: vuela 7s linear infinite normal both;
+}
+span.uno {
+    width: 100px;
+    height: 100px;
+    background-color: #E86BFF;
+    bottom: -100px;
+}
+span.dos {
+    width: 70px;
+    height: 70px;
+    background-color: #90BAFF;
+    bottom: -70px;
+}
+span.tres {
+    width: 50px;
+    height: 50px;
+    background-color: #FF5071;
+    bottom: -50px;
+}
+span.cuatro {
+    width: 20px;
+    height: 20px;
+    background-color: #67F3D4;
+    bottom: -20px;
+}
+@keyframes vuela {
+    from {
+        transform: rotate(0deg);
+        bottom: 0;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    to {
+        transform: rotate(360deg);
+        bottom: calc(100% + 100px);
+        opacity: 0;
+    }
+}
+/* secuencia y orden */
+.animacion span:nth-child(1) {
+    left: 20%;
+    animation-delay: 3s;
+}
+.animacion span:nth-child(2) {
+    left: 50%;
+}
+.animacion span:nth-child(3) {
+    left: 35%;
+    animation-delay: 5s;
+}
+.animacion span:nth-child(4) {
+    left: 75%;
+    animation-delay: 1s;
+}
+.animacion span:nth-child(6) {
+    left: 85%;
+    animation-delay: 3s;
+}
+.animacion span:nth-child(7) {
+    left: 90%;
+    animation-delay: 5s;
+}
+.animacion span:nth-child(8) {
+    left: 65%;
+}
+.animacion span:nth-child(9) {
+    left: 60%;
+}
+.animacion span:nth-child(10) {
+    left: 75%;
+    animation-delay: 6s;
+}
+.animacion span:nth-child(11) {
+    left: 10%;
+}
+.animacion span:nth-child(12) {
+    left: 45%;
+    animation-delay: 3s;
+}
+</style>
+<!--==========================
+=            html            =
+===========================-->
+<section class="contenedor-fondo-animado">
+    <div class="animacion">
+        <!--  -->
+        <span class="uno"></span>
+        <span class="dos"></span>
+        <span class="tres"></span>
+        <span class="cuatro"></span>
+        <!--  -->
+        <span class="uno"></span>
+        <span class="dos"></span>
+        <span class="tres"></span>
+        <span class="cuatro"></span>
+        <!--  -->
+        <span class="uno"></span>
+        <span class="dos"></span>
+        <span class="tres"></span>
+        <span class="cuatro"></span>
+    </div>
+    <div class="seccion-contenido">
+        <div class="contenido">
+            <h4>Fondo animado</h4>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.</p>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+    </div>
+</section>
+<!--====  End of html  ====-->
+</body>
+
+</html>
