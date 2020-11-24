@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    padding: 1rem;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+
+.btn-animado {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 9px;
+    box-shadow: 0 0 12px 1px rgba(0, 0, 0, .15);
+    background-color: #fff;
+    border: 1px solid #2CA8B0;
+    color: #2CA8B0;
+    cursor: pointer;
+    transition: all ease-in 150ms;
+    overflow: hidden;
+}
+.btn-animado i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 1rem;
+    font-size: 1.7rem;
+    opacity: 1;
+}
+.btn-animado:hover {
+    background-color: #2CA8B0;
+    color: #fff;
+}
+.btn-animado:active {
+    background-color: #22848A;
+}
+
+.color-facebook {
+    border: 1px solid #3B69FF;
+    color: #3B69FF;
+}
+.color-facebook:hover {
+    background-color: #3B69FF;
+    color: #fff;
+}
+.color-facebook:active {
+    background-color: #3155C9;
+}
+.color-instagram {
+    border: 1px solid #A03BFF;
+    color: #3BC1FF;
+}
+.color-instagram .tex-icono {
+    color: #A03BFF;
+}
+.color-instagram:hover {
+    background: linear-gradient(#A03BFF, #3BC1FF);
+    color: #fff;
+}
+.color-instagram:active {
+    background: linear-gradient(#7D2FC7, #2A82AA);
+}
+.color-instagram:hover .tex-icono {
+    color: #fff;
+}
+
+.btn-animado.animacion-uno:hover i {
+    animation: anim-uno 350ms ease-in normal both;
+    transform: translate(0);
+}
+@keyframes anim-uno {
+    from {
+        transform: translateY(-100%); 
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(.5rem); 
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+.btn-animado.animacion-dos:hover i {
+    animation: anim-dos 350ms ease-in normal both;
+    transform: translate(0);
+}
+@keyframes anim-dos {
+    from {
+        transform: translateY(100%); 
+        opacity: 0;
+    }
+    70% {
+        transform: translateY(-.5rem); 
+        opacity: 1;
+    }
+    to {
+        transform: translateY(0); 
+        opacity: 1;
+    }
+}
+
+.btn-animado.animacion-tres:hover i {
+    animation: anim-tres 350ms ease-in normal both;
+    transform: translate(0);
+}
+@keyframes anim-tres {
+    from {
+        transform: translateX(-200%); 
+        opacity: 0;
+    }
+    70% {
+        transform: translateX(1rem); 
+        opacity: 1;
+    }
+    to {
+        transform: translateX(0); 
+        opacity: 1;
+    }
+}
+
+.btn-animado.animacion-cuatro:hover i {
+    animation: anim-cuatro 250ms ease-in normal both;
+    transform: scale(0) rotate(0deg);
+}
+@keyframes anim-cuatro {
+    from {
+        transform: scale(0) rotate(0deg) translateX(0);
+    }
+    to {
+        transform: scale(2.75) rotate(-15deg) translateX(-.25rem);
+    }
+}
+</style>
+<!--==========================
+=            html            =
+===========================-->
+<button type="button" class="btn-animado animacion-uno">
+    <i class="fas fa-arrow-alt-circle-down"></i>
+    <span class="tex-icono">
+        boton animado
+    </span>
+</button>
+
+<button type="button" class="btn-animado animacion-dos">
+    <i class="fas fa-arrow-alt-circle-up"></i>
+    <span class="tex-icono">
+        boton animado
+    </span>
+</button>
+
+<button type="button" class="btn-animado animacion-tres color-facebook">
+    <i class="fab fa-facebook-square"></i>
+    <span class="tex-icono">
+        boton animado
+    </span>
+</button>
+
+<button type="button" class="btn-animado animacion-cuatro color-instagram">
+    <i class="fab fa-instagram"></i>
+    <span class="tex-icono">
+        boton animado
+    </span>
+</button>
+<!--====  End of html  ====-->
+</body>
+
+</html>
