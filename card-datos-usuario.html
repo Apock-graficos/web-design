@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.card-usuario {
+    display: flex;
+    width: 400px;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, .15);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-usuario .avatar {
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+    box-shadow: 0 0 12px 2px rgba(0, 0, 0, .15);
+    margin-bottom: 1rem;
+}
+.card-usuario .seccion-avatar {
+    background: linear-gradient(#D482FF, #80A7FF);
+    padding: 20px;
+    color: #fff;
+}
+.card-usuario img {
+    width: 100%;
+}
+.card-usuario .datos-usuario span,
+.card-usuario .datos-usuario {
+    display: block;
+    text-align: center;
+}
+.card-usuario .datos-usuario + .datos-usuario {
+    margin-top: 1rem;
+}
+.card-usuario .datos-usuario span:nth-child(1) {
+    font-size: 1.3em;
+}
+.card-usuario .datos-usuario span:nth-child(2) {
+    font-size: .8em;
+}
+
+.card-usuario .seccion-datos {
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 20px;
+}
+.card-usuario .seccion-datos h5 {
+    font-size: 1.1em;
+    font-weight: normal;
+}
+.card-usuario .seccion-datos p {
+    font-size: .8em;
+    color: #808080;
+    margin-bottom: 1.25rem;
+}
+.seccion-datos .botones-redes {
+    margin-bottom: 1.25rem;
+}
+.seccion-datos .botones-redes a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.seccion-datos > a {
+    color: #808080;
+    text-decoration: none;
+    font-weight: bold;
+}
+.seccion-datos > a:hover {
+    color: #5E5E5E;
+}
+.seccion-datos .botones-redes a.facebook {
+    background-color: #5E80FF;
+}
+.seccion-datos .botones-redes a.twitter {
+    background-color: #36BEC7;
+}
+.seccion-datos .botones-redes a.instagram {
+    background: linear-gradient(#D482FF, #80A7FF);
+}
+.seccion-datos .bio-usuario {
+    font-size: 0.9rem;
+    color: #858585;
+}
+
+@media (max-width: 780px) {
+    .card-usuario {
+        flex-direction: column;
+        width: 320px;
+    }
+    .card-usuario .seccion-avatar {
+        display: flex;
+        align-items: center;
+    }
+    .seccion-avatar .avatar {
+        margin-right: 1rem;
+        width: 55px;
+        height: 55px;
+        border: 3px solid #fff;
+        margin-bottom: 0;
+    }
+    .card-usuario .seccion-avatar .datos-usuario {
+        margin: 0;
+        margin-right: 1rem;
+    }
+    .card-usuario .seccion-avatar .datos-redes {
+        flex-grow: 1;
+        flex-basis: 0;
+        display: flex;
+        align-items: center;
+    }
+    .card-usuario .datos-usuario span:nth-child(1) {
+        font-size: 1.1em;
+    }
+    .card-usuario .datos-usuario span:nth-child(2) {
+        font-size: .7em;
+    }
+}
+</style>
+
+<!--==========================
+=            html            =
+===========================-->
+<div class="card-usuario">
+    <div class="seccion-avatar">
+        <div class="avatar">
+            <div class="img-avatar">
+                <img src="http://localhost/multimedia/relleno/img-c10.png" alt="">
+            </div>
+        </div>
+        <div class="datos-redes">
+            <div class="datos-usuario">
+                <span>145</span>
+                <span>Seguidores</span>
+            </div>
+            <div class="datos-usuario">
+                <span>75</span>
+                <span>Seguidos</span>
+            </div>
+        </div>
+    </div>
+    <div class="seccion-datos">
+        <h5>Camila alejandra</h5>
+        <p><i class="fas fa-map-marker-alt"></i> Colombia / Cartagena</p>
+        <div class="botones-redes">
+            <a href="#" class="btn-social facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="btn-social twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="btn-social instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <p class="bio-usuario">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+        <a href="#" title="">Ver perfil</a>
+    </div>
+</div>
+<!--====  End of html  ====-->
+
+
+
+
+<!--=============================
+redes sociales fijadas en pantalla
+No es necesario que copies esto!
+==============================-->
+<style>
+.mensaje a {
+    color: inherit;
+    margin-right: .5rem;
+    display: inline-block;
+}
+.mensaje a:hover {
+    color: #309B76;
+    transform: scale(1.4)
+}
+</style>
+<div class="mensaje" style="display: block;position: fixed;bottom: 1rem;left: 1rem; opacity: 0.5;">
+    <p style="font-size: .75rem;">Apock graficos</p>
+    <div>
+        <a target="_blank" href="https://www.facebook.com/ApockGraficos"><i class="fab fa-facebook-square"></i></a>
+        <a target="_blank" href="https://twitter.com/ApockGraficos"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/apock.graficos"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UC15DkMZQ80aoW_Rqk4n2T_w"><i class="fab fa-youtube"></i></a>
+    </div>
+</div>
+<!--====  End of tarjeta  ====-->
+</body>
+
+</html>
