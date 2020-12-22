@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.card-social {
+    width: 400px;
+    display: block;
+    box-shadow: 0 0 12px 2px rgba(0,0,0,.15);
+    position: relative;
+    border-radius: 12px;
+}
+.card-social .card-social-header {
+    position: relative;
+}
+.card-social .card-social-header .avatar {
+    position: absolute;
+    top: -43px;
+    left: calc(50% - 43px);
+    display: block;
+    width: 86px;
+    height: 86px;
+    background: #E4E4E4;
+    border-radius: 50%;
+    border: 5px solid #fff;
+    box-shadow: 0 0 12px 2px rgba(0,0,0,.15);
+    z-index: 1;
+    overflow: hidden;
+}
+.card-social .figura-hover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: #fff;
+    height: 0;
+    transition: 200ms ease-in all;
+    border-radius: 0 0 12px 12px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 0 12px 2px rgba(0,0,0,.15);
+    opacity: 0;
+    visibility: hidden;
+}
+.card-social .figura-hover::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: #fff;
+}
+.card-social .menu-social:hover ~ .figura-hover {
+    height: 70px;
+    opacity: 1;
+    visibility: visible;
+}
+.card-social .card-social-header .seccion-datos {
+    display: block;
+    padding-top: 3.75rem;
+    text-align: center;
+    margin-bottom: .75rem;
+}
+.card-social .card-social-header .seccion-datos h5 {
+    font-size: 1.25em;
+    font-weight: normal;
+}
+.card-social .card-social-header .seccion-datos p {
+    margin-bottom: 0;
+    font-size: 0.9em;
+    color: #7F7F7F;
+}
+.card-social .card-social-header .seccion-datos p i {
+    margin-right: .25rem;
+}
+.card-social .card-social-header .avatar img {
+    width: 100%;
+}
+
+.card-social .menu-social {
+    display: block;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+    text-align: center;
+}
+.card-social .menu-social ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.card-social .menu-social ul li {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+.card-social .menu-social ul a {
+    text-decoration: none;
+    display: inline-block;
+    transition: all ease-out 200ms;
+}
+.card-social .menu-social ul a:hover {
+    transform: scale(1.15);
+} 
+.card-social .menu-social ul a i {
+    font-size: 1.85rem;
+}
+.card-social .menu-social ul .nombre-social {
+    font-size: .8em;
+    display: block;
+}
+.card-social .menu-social .footer-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    left: 0;
+    position: absolute;
+    border-radius: 0 0 12px 12px;
+    height: 70px;
+    margin-top: .5rem;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    background-color: #fff;
+}
+.card-social .menu-social .footer-menu span {
+    display: block;
+    color: #767676;
+    transform: translateY(1.5rem);
+    transition: all ease-in 200ms;
+    opacity: 0;
+}
+.card-social .menu-social li:hover .footer-menu {
+    opacity: 1;
+    visibility: visible;
+}
+.card-social .menu-social li:hover .footer-menu span {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.card-social a.facebook {
+    color: #3468DE;
+}
+.card-social a.twitter {
+    color: #39CECC;
+}
+.card-social a.instagram {
+    color: #B32BDA;
+}
+.card-social a.youtube {
+    color: #EB3E3E;
+}
+
+@media (max-width: 480px) {
+    .card-social {
+        width: 320px;
+    }
+    .card-social .seccion-datos h5 {
+        font-size: 1.1rem !important;
+    }
+    .card-social .menu-social ul li a i {
+        font-size: 1.7rem;
+    }
+    .card-social .menu-social .nombre-social {
+        display: none !important;
+    }
+}
+</style>
+
+<!--==========================
+=            html            =
+===========================-->
+<div class="card-social">
+    <div class="card-social-header">
+        <div class="avatar">
+            <!-- imgane 1:1 -->
+            <img src="http://localhost/multimedia/relleno/img-c10.png" alt="img">
+        </div>
+        <div class="seccion-datos">
+            <h5>Nombre de usuario</h5>
+            <p><i class="fas fa-map-marker-alt"></i> colombia</p>
+        </div>
+    </div>
+    <div class="menu-social">
+        <ul>
+            <li>
+                <a href="#" title="" class="facebook">
+                    <i class="fab fa-facebook-square"></i>
+                    <span class="nombre-social">
+                        facebook
+                    </span>
+                </a>
+                <div class="footer-menu">
+                    <span>75 me gusta</span>
+                </div>
+            </li>
+            <li>
+                <a href="#" title="" class="twitter">
+                    <i class="fab fa-twitter"></i>
+                    <span class="nombre-social">
+                        twitter
+                    </span>
+                </a>
+                <div class="footer-menu">
+                    <span>102 seguidores</span>
+                </div>
+            </li>
+            <li>
+                <a href="#" title="" class="instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span class="nombre-social">
+                        instagram
+                    </span>
+                </a>
+                <div class="footer-menu">
+                    <span>47 seguidores</span>
+                </div>
+            </li>
+            <li>
+                <a href="#" title="" class="youtube">
+                    <i class="fab fa-youtube"></i>
+                    <span class="nombre-social">
+                        youtube
+                    </span>
+                </a>
+                <div class="footer-menu">
+                    <span>13 suscriptores</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="figura-hover"></div>
+</div>
+<!--====  End of html  ====-->
+
+
+
+
+<!--=============================
+redes sociales fijadas en pantalla
+No es necesario que copies esto!
+==============================-->
+<style>
+.mensaje a {
+    color: inherit;
+    margin-right: .5rem;
+    display: inline-block;
+}
+.mensaje a:hover {
+    color: #309B76;
+    transform: scale(1.4)
+}
+</style>
+<div class="mensaje" style="display: block;position: fixed;bottom: 1rem;left: 1rem; opacity: 0.5;">
+    <p style="font-size: .75rem;">Apock graficos</p>
+    <div>
+        <a target="_blank" href="https://www.facebook.com/ApockGraficos"><i class="fab fa-facebook-square"></i></a>
+        <a target="_blank" href="https://twitter.com/ApockGraficos"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/apock.graficos"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UC15DkMZQ80aoW_Rqk4n2T_w"><i class="fab fa-youtube"></i></a>
+    </div>
+</div>
+<!--====  End of tarjeta  ====-->
+</body>
+
+</html>
