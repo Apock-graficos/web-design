@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apock web design</title>
+    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+<!--======================================
+=            Apock web design            =
+=======================================
+
+Gracias por utilizar mi contenido!
+Me siento agradecido compartiendo para Uds
+No olvides seguirme en:
+👉 Instagram - https://www.instagram.com/apockgraficos/
+👉 Twitter - https://twitter.com/ApockGraficos
+👉 Faccobook - https://www.facebook.com/ApockGraficos
+
+====-->
+
+<style type="text/css">
+/*=====================================
+reset estilos
+no es necesario que copies esto
+=====================================*/
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    color: #404040;
+    font-family: "Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+}
+
+/*=====================================
+estilos de la utilidad
+Copiar esto
+=====================================*/
+.contenedor-btn-file input[type="file"] {
+    appearance: none;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+.contenedor-btn-file {
+    display: inline-block;
+    position: relative;
+    background-color: #186CC3;
+    color: #fff;
+    border: 0;
+    padding: 12px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, .15);
+    overflow: hidden;
+    transition: ease-out 120ms background-color;
+}
+.contenedor-btn-file:hover {
+    background-color: #16579B;
+}
+.contenedor-btn-file:active {
+    background-color: #114378;
+}
+.contenedor-btn-file > i {
+    margin-right: 15px;
+}
+
+.contenedor-btn-file label {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+
+.contenedor-btn-file.bordeado {
+    background-color: #fff;
+    border: 2px solid #186CC3;
+    color: #186CC3;
+}
+.contenedor-btn-file.bordeado:hover {
+    background-color: #186CC3;
+    color: #fff;
+}
+</style>
+
+<!--==========================
+=            html            =
+===========================-->
+<button class="contenedor-btn-file">
+    <i class="fas fa-file"></i>
+    Adjuntar archivo
+    <label for="btn-file"></label>
+    <input type="file" id="btn-file">
+</button>
+
+<button class="contenedor-btn-file bordeado">
+    <i class="fas fa-file"></i>
+    Adjuntar archivo
+    <label for="btn-file"></label>
+    <input type="file" id="btn-file">
+</button>
+<!--====  End of html  ====-->
+
+
+
+
+<!--=============================
+redes sociales fijadas en pantalla
+No es necesario que copies esto!
+==============================-->
+<style>
+.mensaje a {
+    color: inherit;
+    margin-right: .5rem;
+    display: inline-block;
+}
+.mensaje a:hover {
+    color: #309B76;
+    transform: scale(1.4)
+}
+</style>
+<div class="mensaje" style="display: block;position: fixed;bottom: 1rem;left: 1rem; opacity: 0.5;">
+    <p style="font-size: .75rem;">Apock graficos</p>
+    <div>
+        <a target="_blank" href="https://www.facebook.com/ApockGraficos"><i class="fab fa-facebook-square"></i></a>
+        <a target="_blank" href="https://twitter.com/ApockGraficos"><i class="fab fa-twitter"></i></a>
+        <a target="_blank" href="https://www.instagram.com/apock.graficos"><i class="fab fa-instagram"></i></a>
+        <a target="_blank" href="https://www.youtube.com/channel/UC15DkMZQ80aoW_Rqk4n2T_w"><i class="fab fa-youtube"></i></a>
+    </div>
+</div>
+<!--====  End of tarjeta  ====-->
+</body>
+
+</html>
